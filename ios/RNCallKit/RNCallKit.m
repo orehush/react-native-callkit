@@ -245,6 +245,7 @@ RCT_EXPORT_METHOD(setMutedCall:(NSString *)uuidString muted:(BOOL)muted)
                 callUpdate.supportsGrouping = NO;
                 callUpdate.supportsUngrouping = NO;
                 callUpdate.hasVideo = NO;
+                callUpdate.localizedCallerName = startCallAction.contactIdentifier;
                 [self.callKitProvider reportCallWithUUID:startCallAction.callUUID updated:callUpdate];
             }
         }
